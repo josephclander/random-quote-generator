@@ -41,9 +41,22 @@ const quotes = [
 
 // console.log(quotes[0].quote);
 
-/***
- * `getRandomQuote` function
- ***/
+/**
+ * This is a function to retrieve a quote from the array at random
+ */
+const getRandomQuote = () => {
+  /**
+   * @return {number} randomNumber - from 0 to quotes length
+   */
+  const randomNumber = Math.floor(Math.random() * quotes.length);
+  // console.log({ randomNumber });
+
+  /**
+   * @return {object} A quote object from quotes
+   */
+  return quotes[randomNumber];
+};
+// console.log(getRandomQuote());
 
 /***
  * `printQuote` function
