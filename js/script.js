@@ -3,13 +3,9 @@ Treehouse FSJS Techdegree:
 project 1 - A Random Quote Generator
 ******************************************/
 
-// For assistance:
-// Check the "Project Resources" section of the project instructions
-// Reach out in your Slack community - https://treehouse-fsjs-102.slack.com/app_redirect?channel=chit-chat
-
-/***
+/**
  * `quotes` array
- ***/
+ */
 const quotes = [
   {
     quote: 'I have no special talent. I am only passionately curious.',
@@ -39,8 +35,6 @@ const quotes = [
   },
 ];
 
-// console.log(quotes[0].quote);
-
 /**
  * This is a function to retrieve a quote from the array at random
  */
@@ -56,16 +50,51 @@ const getRandomQuote = () => {
    */
   return quotes[randomNumber];
 };
-// console.log(getRandomQuote());
 
-/***
- * `printQuote` function
- ***/
+/**
+ * Prints a quote on the document
+ */
+const printQuote = () => {
+  /**
+   * @return {object} A quote object from quotes
+   */
+  const quoteObject = getRandomQuote();
 
-/***
- * click event listener for the print quote button
- * DO NOT CHANGE THE CODE BELOW!!
- ***/
+  /**
+   * @type {string} html - html to be inserted
+   */
+  let html = `
+      <p class="quote">${quoteObject.quote}</p>
+      <p class="source">${quoteObject.source}`;
+
+  /**
+   * Truthy check for a citation in the object
+   */
+  if (quoteObject.citation) {
+    html += `<span class="citation">${quoteObject.citation}</span>`;
+  }
+
+  /**
+   * Truthy check for a year in the object
+   */
+  if (quoteObject.year) {
+    html += `<span class="year">${quoteObject.year}</span>`;
+  }
+
+  /**
+   * Add the closing p tag
+   */
+  html += `</p>`;
+
+  /**
+   * Insert html into the quote-box element
+   */
+  document.getElementById('quote-box').innerHTML = html;
+};
+
+/**
+ * Click event listener for the print quote button
+ */
 
 document
   .getElementById('load-quote')
