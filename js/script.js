@@ -4,6 +4,20 @@ project 1 - A Random Quote Generator
 ******************************************/
 
 /**
+ * Create a random number from 0 to 255
+ */
+const rand0to255 = () => {
+  return Math.floor(Math.random() * 256);
+};
+
+/**
+ * Create a random rgb value
+ */
+const rgbValue = () => {
+  return `rgb(${rand0to255()}, ${rand0to255()}, ${rand0to255()})`;
+};
+
+/**
  * `quotes` array
  */
 const quotes = [
@@ -101,6 +115,12 @@ const printQuote = () => {
    * Insert html into the quote-box element
    */
   document.getElementById('quote-box').innerHTML = html;
+
+  /**
+   * Change the background colour
+   */
+  const rgbText = rgbValue();
+  document.querySelector('body').style.backgroundColor = rgbText;
 };
 
 /**
