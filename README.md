@@ -133,3 +133,15 @@ For this first project, you'll create an app that displays random famous quotes 
        - Open and run your app.
        - Open the Chrome DevTools console.
        - Pretend to be a user and test all aspects of functionality and every possible state of the app, while monitoring the console for bugs and resolving any that arise.
+
+# Extra Credit
+
+1.  Object Properties
+
+    - At least one object has at least one additional property, such as tags.
+    - At least one additional property prints to the page with the its quote.
+
+2.  `printQuote` function
+
+    - Quotes automatically refresh at regular intervals.
+    - Background color changes to a random color each time the quote refreshes.
