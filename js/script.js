@@ -106,7 +106,11 @@ const printQuote = () => {
 /**
  * Click event listener for the print quote button
  */
-
 document
   .getElementById('load-quote')
   .addEventListener('click', printQuote, false);
+
+/**
+ * Interval timer to call printQuote every 10s
+ */
+setInterval(printQuote, 10000);
