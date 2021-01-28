@@ -10,11 +10,13 @@ const quotes = [
   {
     quote: 'I have no special talent. I am only passionately curious.',
     source: 'Albert Einstein',
+    tag: 'Science',
   },
   {
     quote: 'Wisely, and slow. They stumble that run fast.',
     source: 'William Shakespeare',
     citation: 'Romeo & Juliet',
+    tag: 'Literature',
   },
   {
     quote: 'If you judge people, you have no time to love them.',
@@ -25,6 +27,7 @@ const quotes = [
     source: 'Stephen King',
     citation: 'Different Seasons',
     year: 1982,
+    tag: 'Literature',
   },
   {
     quote:
@@ -32,6 +35,7 @@ const quotes = [
     source: 'Mitch Albom',
     citation: 'The Five People You Meet In Heaven',
     year: 2003,
+    tag: 'Literature',
   },
 ];
 
@@ -79,6 +83,13 @@ const printQuote = () => {
    */
   if (quoteObject.year) {
     html += `<span class="year">${quoteObject.year}</span>`;
+  }
+
+  /**
+   * Truthy check for a tag in the object
+   */
+  if (quoteObject.tag) {
+    html += `<span class="tag">${quoteObject.tag.toUpperCase()}</span>`;
   }
 
   /**
