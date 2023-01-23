@@ -1,12 +1,8 @@
 # A Random Quote Generator
 
-## Project Overview
+An app that displays random famous quotes each time a button is clicked.
 
-This is a project assigned for the Treehouse Fullstack Techdegree.
-
-For this first project, you'll create an app that displays random famous quotes each time a button is clicked. You will select your own quotes from famous historical figures, artists, scientists, celebrities, etc.
-
-## Project Instructions
+## Client Requirements
 
 1.  Create an Array of objects to store the data for your quotes
     A data structure is necessary to store and organize the quotes in your app. A basic array of objects is a lightweight way to store information.
